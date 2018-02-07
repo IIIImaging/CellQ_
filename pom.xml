@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  
+	<parent>
+		<groupId>sc.fiji</groupId>
+		<artifactId>pom-fiji</artifactId>
+		<version>17.0.0</version>
+		<relativePath />
+	</parent> 
+ 
+ 	<artifactId>CellQ</artifactId>
+ 	<groupId>BiophysicalImagingIII</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+ 
+<!-- Plugin Information -->
+ 	
+ 	<url>https://github.com/IIIImaging/CellQ</url>
+	<inceptionYear>2017</inceptionYear>
+	<organization>
+		<url>https://github.com/IIIImaging</url>
+		<name>IIIImaging</name>
+	</organization>
+		
+	<licenses>
+		<license>
+			<name>GNU General Public License v3+</name>
+			<url>http://www.gnu.org/licenses/gpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<developers>
+        <developer>
+            <id></id>
+            <name>Jan Niklas Hansen</name>
+            <email>jan.hansen@caesar.de</email>
+            <url>r</url>
+            <organization></organization>
+            <organizationUrl></organizationUrl>
+            <roles>
+                <role>developer</role>
+                <role>support</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>            
+        <developer>
+            <id></id>
+            <name>Jan Fritz Jikeli</name>
+            <email>jan.jikeli@caesar.de</email>
+            <url>r</url>
+            <organization></organization>
+            <organizationUrl></organizationUrl>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>    
+    </developers>
+    
+    <contributors>
+        <!--
+        NB: Need a least one element to override the parent.
+        See: https://issues.apache.org/jira/browse/MNG-5220
+        -->
+        <contributor><name>Sebastian Raßmann</name></contributor>
+            <contributor><name>Leyla Weyermann</name></contributor>
+    </contributors>
+ 	
+ 	<mailingLists>
+		<mailingList>
+			<name>ImageJ Forum</name>
+			<archive>http://forum.imagej.net/</archive>
+		</mailingList>
+	</mailingLists>
+ 	
+<!--  	<scm> -->
+<!-- 		<connection>scm:git:git://github.com/hansenjn/MotiQ/3D Analyzer</connection> -->
+<!-- 		<developerConnection>scm:git:git@github.com:hansenjn/MotiQ/3D Analyzer</developerConnection> -->
+<!-- 		<tag>HEAD</tag> -->
+<!-- 		<url>https://github.com/hansenjn/MotiQ/3D Analyzer</url> -->
+<!-- 	</scm> -->
+ 	
+ 	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/IIIImaging/CellQ//issues</url>
+	</issueManagement>
+ 	
+ 	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+ 	
+ 	<properties>
+		<main-class>Main</main-class>
+		<package-name>CellQ_</package-name>
+		<license.licenseName>gpl_v3</license.licenseName>
+		<license.copyrightOwners>Jan Niklas Hansen and Jan Fritz Jikeli</license.copyrightOwners>
+		<license.projectName>CellQ_</license.projectName>
+	</properties>
+ 	
+ 	<repositories>
+    	<repository>
+            <id>imagej.public</id>
+            <url>http://maven.imagej.net/content/groups/public</url>
+        </repository>
+        <repository>
+     		<id>jzy3d-snapshots</id>
+     		<name>Jzy3d Snapshots</name>
+     		<url>http://maven.jzy3d.org/snapshots</url>
+  		</repository>
+  		<repository>
+     		<id>jzy3d-releases</id>
+     		<name>Jzy3d Releases</name>
+     		<url>http://maven.jzy3d.org/releases</url>
+  		</repository>
+    </repositories>
+ 
+<!-- TODO: See Optional Dependencies section -->
+
+    <dependencies>
+        <!-- ImageJ dependencies -->
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>ij</artifactId>
+        </dependency>    
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <version>2.0.8</version>
+  			<artifactId>pdfbox</artifactId>
+        </dependency>	
+        <dependency>
+ 			<groupId>org.bouncycastle</groupId>
+  			<artifactId>bcprov-jdk15</artifactId>
+  			<version>1.44</version>
+			</dependency>
+		<dependency>
+  			<groupId>org.bouncycastle</groupId>
+  			<artifactId>bcmail-jdk15</artifactId>
+  			<version>1.44</version>
+		</dependency>
+		<dependency>
+  			<groupId>com.ibm.icu</groupId>
+  			<artifactId>icu4j</artifactId>
+  			<version>3.8</version>
+		</dependency>      
+		<dependency>
+			<groupId>org.jogamp.gluegen</groupId>
+			<artifactId>gluegen-rt-main</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jogamp.jogl</groupId>
+			<artifactId>jogl-all-main</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.smurn</groupId>
+			<artifactId>jply</artifactId>
+			<version>0.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.jmatio</groupId>
+			<artifactId>jmatio</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.miglayout</groupId>
+			<artifactId>miglayout</artifactId>
+			<version>3.7.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<!--<scope>test</scope> do not limit scope to test as the lib embbed Replay,
+				i.e. tools to ease non regression tests for interactive features -->
+		</dependency>
+<!--         <dependency> -->
+<!--             <groupId>sc.fiji</groupId> -->
+<!--   			<artifactId>AnalyzeSkeleton_</artifactId> -->
+<!--         </dependency>	 -->
+<!--         <dependency> -->
+<!--             <groupId>sc.fiji</groupId> -->
+<!--   			<artifactId>Skeletonize3D_</artifactId> -->
+<!--         </dependency>	 -->
+    </dependencies>  
+    
+    <build>
+<!--        <directory>target</directory> -->
+<!--     	<outputDirectory>target/classes</outputDirectory> -->
+<!--     	<finalName>${artifactId}-${version}</finalName> -->
+		<plugins>
+			<!--         avoid errors in java doc creation -->			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<projectName>HistogramQ plugin for ImageJ.</projectName>
+					<organizationName>Jan Niklas Hansen</organizationName>
+					<descriptorRefs>
+            			<descriptorRef>jar-with-dependencies</descriptorRef>
+          			</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			
+
+		</plugins>
+	</build>  
+    <description>CellQ_ automated softwarer to analyse calcium signal in HEK cells.</description>
+    <name>CellQ</name>
+</project>
